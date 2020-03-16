@@ -1,9 +1,5 @@
-// var now = new Date();
 var dDay1 = new Date(2020,4,13,0,0,0,0);
 var dDay2 = new Date(2020,10,19,0,0,0,0);
-
-// var temp = dDay1.getTime() - now.getTime();
-// var result = Math.floor(temp / (1000 * 60 * 60 * 24)) * -1;
 
 function calcResult(t){
    var arr = new Array(7);
@@ -24,17 +20,22 @@ function calcResult(t){
 
 function wirteTime(){
     var time1 = calcResult(dDay1);
-    document.getElementById("social_output").innerHTML = `${time1[0]}개월 ${time1[1]}주 // ${time1[2]}일 ${time1[3]}시간 ${time1[4]}분 ${time1[5]}.${time1[6]}초`;
+
+    if (time1[6] < 10){
+        document.getElementById("social_output").innerHTML = `${time1[0]}개월 ${time1[1]}주 // ${time1[2]}일 ${time1[3]}시간 ${time1[4]}분 ${time1[5]}.0${time1[6]}초`;
+    }
+    else{
+        document.getElementById("social_output").innerHTML = `${time1[0]}개월 ${time1[1]}주 // ${time1[2]}일 ${time1[3]}시간 ${time1[4]}분 ${time1[5]}.${time1[6]}초`;
+    }
 
     var time2 = calcResult(dDay2);
-    document.getElementById("SAT_output").innerHTML = `${time2[0]}개월 ${time2[1]}주 // ${time2[2]}일 ${time2[3]}시간 ${time2[4]}분 ${time2[5]}.${time2[6]}초`;
+
+    if (time2[6] < 10){
+        document.getElementById("SAT_output").innerHTML = `${time2[0]}개월 ${time2[1]}주 // ${time2[2]}일 ${time2[3]}시간 ${time2[4]}분 ${time2[5]}.0${time2[6]}초`;
+    }
+    else{
+        document.getElementById("SAT_output").innerHTML = `${time2[0]}개월 ${time2[1]}주 // ${time2[2]}일 ${time2[3]}시간 ${time2[4]}분 ${time2[5]}.${time2[6]}초`;
+    }
 }
-
-
-// document.writeln(dDay1);
-// document.writeln(now);
-// document.writeln(result);
-
-// calcResult(dDay2)
 
 setInterval(wirteTime,10);
