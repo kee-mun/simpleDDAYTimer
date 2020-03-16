@@ -1,0 +1,52 @@
+.calculator_grid{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: solid black 5px;
+}
+
+.social{
+    border-right: solid black 5px;
+}
+
+.social div{
+    text-align: center;
+    background-color: rgba(0, 0,0, 0.3);
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 1fr;
+    margin-bottom: 3px;
+}
+
+.SAT{
+    margin-left: 5px;
+}
+
+.SAT div{
+    text-align: center;
+    background-color: rgba(0, 0,0, 0.3);
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 1fr;
+    margin-bottom: 3px;
+}
+
+.result{
+    background-color: rgba(0, 0,0, 0.3);
+}
+
+@media(max-width:715px){
+    .calculator_grid{
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        grid-template-columns: 1fr;
+    }
+
+    .social{
+        border-right: none;
+        border-bottom: solid black 5px;
+    }
+
+}
