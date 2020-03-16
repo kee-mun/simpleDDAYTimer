@@ -21,21 +21,26 @@ function calcResult(t){
 function wirteTime(){
     var time1 = calcResult(dDay1);
 
+    var text1 = `${time1[0]}개월 ${time1[1]}주 // ${time1[2]}일 ${time1[3]}시간 ${time1[4]}분 ${time1[5]}`
+
     if (time1[6] < 10){
-        document.getElementById("social_output").innerHTML = `${time1[0]}개월 ${time1[1]}주 // ${time1[2]}일 ${time1[3]}시간 ${time1[4]}분 ${time1[5]}.0${time1[6]}초`;
+        text1 = text1 + `.0${time1[6]}초`
     }
     else{
-        document.getElementById("social_output").innerHTML = `${time1[0]}개월 ${time1[1]}주 // ${time1[2]}일 ${time1[3]}시간 ${time1[4]}분 ${time1[5]}.${time1[6]}초`;
+        text1 = text1 + `.${time1[6]}초`;
     }
+    document.getElementById("social_output").innerHTML = text1
 
     var time2 = calcResult(dDay2);
+    var text2 = `${time2[0]}개월 ${time2[1]}주 // ${time2[2]}일 ${time2[3]}시간 ${time2[4]}분 ${time2[5]}`
 
     if (time2[6] < 10){
-        document.getElementById("SAT_output").innerHTML = `${time2[0]}개월 ${time2[1]}주 // ${time2[2]}일 ${time2[3]}시간 ${time2[4]}분 ${time2[5]}.0${time2[6]}초`;
+        text2 = text2 + `.0${time2[6]}초`;
     }
     else{
-        document.getElementById("SAT_output").innerHTML = `${time2[0]}개월 ${time2[1]}주 // ${time2[2]}일 ${time2[3]}시간 ${time2[4]}분 ${time2[5]}.${time2[6]}초`;
+        text2 = text2 + `.${time2[6]}초`;
     }
+    document.getElementById("SAT_output").innerHTML = text2
 }
 
 setInterval(wirteTime,10);
