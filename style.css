@@ -51,7 +51,7 @@
 
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-width: 412px) and (max-width: 767px) {
     .calculator_grid{
         display: grid;
         align-content: center;
@@ -64,4 +64,4 @@
         border-bottom: solid black 5px;
     }
     
-    }
+}
