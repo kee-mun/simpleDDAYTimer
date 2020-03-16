@@ -36,7 +36,7 @@
     background-color: rgba(0, 0,0, 0.3);
 }
 
-@media(max-width:715px){
+@media(max-width:800px){
     .calculator_grid{
         display: grid;
         align-content: center;
@@ -50,3 +50,18 @@
     }
 
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .calculator_grid{
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        grid-template-columns: 1fr;
+    }
+
+    .social{
+        border-right: none;
+        border-bottom: solid black 5px;
+    }
+    
+    }
