@@ -1,3 +1,6 @@
+h2{
+    text-align:center;
+}
 .calculator_grid{
     display: grid;
     align-content: center;
