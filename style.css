@@ -66,18 +66,3 @@ h2{
     }
 
 }
-
-@media only screen and (min-width: 412px) and (max-width: 767px) {
-    .calculator_grid{
-        display: grid;
-        align-content: center;
-        justify-content: center;
-        grid-template-columns: 1fr;
-    }
-
-    .social{
-        border-right: none;
-        border-bottom: solid black 5px;
-    }
-    
-}
