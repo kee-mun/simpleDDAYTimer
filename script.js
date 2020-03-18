@@ -1,5 +1,9 @@
 var dDay1 = new Date(2020,4,13,0,0,0,0);
 var dDay2 = new Date(2020,10,19,0,0,0,0);
+var dDay3 = new Date(2020,10,27,0,0,0,0);
+var dDay4 = new Date(2021,2,23,0,0,0,0);
+
+console.log(dDay4.getFullYear());
 
 function calcResult(t){
    var arr = new Array(7);
@@ -7,7 +11,12 @@ function calcResult(t){
    var gap = t.getTime() - now.getTime();
    var step;
 
-   arr[0] = Math.floor(t.getMonth() - now.getMonth());
+   if (dDay4.getFullYear() - now.getFullYear() > 0){
+       arr[0] = Math.floor(12 - (now.getMonth() - t.getMonth()));
+   }else{
+    arr[0] = Math.floor(t.getMonth() - now.getMonth());
+   }
+
    arr[1] = Math.floor(gap / (1000*60*60*24*7));
    arr[2] = Math.floor(gap / (1000*60*60*24));
    arr[3] = Math.floor(gap / (1000*60*60) - (24 * arr[2]));
@@ -41,6 +50,29 @@ function wirteTime(){
         text2 = text2 + `.${time2[6]}초`;
     }
     document.getElementById("SAT_output").innerHTML = text2
+
+    var time3 = calcResult(dDay3);
+    var text3 = `${time3[0]}개월 ${time3[1]}주 // ${time3[2]}일 ${time3[3]}시간 ${time3[4]}분 ${time3[5]}`
+
+    if (time3[6] < 10){
+        text3 = text3 + `.0${time3[6]}초`;
+    }
+    else{
+        text3 = text3 + `.${time3[6]}초`;
+    }
+    document.getElementById("social_output_s").innerHTML = text3
+
+
+    var time4 = calcResult(dDay4);
+    var text4 = `${time4[0]}개월 ${time4[1]}주 // ${time4[2]}일 ${time4[3]}시간 ${time4[4]}분 ${time4[5]}`
+
+    if (time4[6] < 10){
+        text4 = text4 + `.0${time4[6]}초`;
+    }
+    else{
+        text4 = text4 + `.${time4[6]}초`;
+    }
+    document.getElementById("social_output_h").innerHTML = text4
 }
 
 setInterval(wirteTime,10);

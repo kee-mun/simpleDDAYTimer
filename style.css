@@ -22,14 +22,14 @@ h2{
     margin-bottom: 3px;
 }
 
-.SAT{
-    margin-left: 5px;
+#SAT_output{
+    margin-left: 20px;
 }
 
 .SAT div{
     text-align: center;
     background-color: rgba(0, 0,0, 0.3);
-    margin-left: 20px;
+    margin-left: 0px;
     margin-right: 20px;
     width: 1fr;
     margin-bottom: 3px;
@@ -37,6 +37,19 @@ h2{
 
 .result{
     background-color: rgba(0, 0,0, 0.3);
+}
+
+.calculator_grid>div{
+    border-bottom: solid 5px black;
+}
+
+#last{
+    border-bottom: none;
+}
+
+#last2{
+    border-right: none;
+    border-bottom: none;
 }
 
 @media(max-width:800px){
