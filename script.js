@@ -11,7 +11,7 @@ function calcResult(t){
    var gap = t.getTime() - now.getTime();
    var step;
 
-   if (dDay4.getFullYear() - now.getFullYear() > 0){
+   if (t.getFullYear() - now.getFullYear() > 0){
        arr[0] = Math.floor(12 - (now.getMonth() - t.getMonth()));
    }else{
     arr[0] = Math.floor(t.getMonth() - now.getMonth());
