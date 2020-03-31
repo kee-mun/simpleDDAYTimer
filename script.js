@@ -1,6 +1,6 @@
 // 목표 날짜 설정
 var dDay1 = new Date(2020,4,13,0,0,0,0);
-var dDay2 = new Date(2020,10,19,0,0,0,0);
+var dDay2 = new Date(2020,11,03,0,0,0,0);
 var dDay3 = new Date(2020,10,27,0,0,0,0);
 var dDay4 = new Date(2021,2,23,0,0,0,0);
 
